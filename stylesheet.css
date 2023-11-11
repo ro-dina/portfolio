@@ -37,23 +37,20 @@
 }
 
 .techim{
-    padding-left: 10px;
-    float: left;
+    text-align: center;
 }
 
 .progateim{
-    float: right;
-    height: 227.78px;
+    text-align: center;
+    margin-left: 100px;
 }
 
 .techtx{
-    float: left;
-    padding-left: 15px;
+    margin-top: 20px;
 }
 
 .progatetx{
-    float: right;
-    padding-right: 250px;
+    margin-top: 20px;
 }
 
 .title1{
