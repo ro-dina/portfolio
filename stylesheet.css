@@ -1,0 +1,78 @@
+.port{
+    margin-top: 0px;
+    color:rgb(255, 255, 255);
+    background-color: #000000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.tcontents{
+    transform: scaleY(1);
+    top: 0;
+    left: 0;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.tcontents ul{
+    list-style-type: none;
+    padding: 0;    
+}
+
+.tcontents li{
+    margin-bottom: 5px;
+}
+
+
+.toc {
+    text-decoration: none;
+    color: #007bff;
+    margin:15px;
+}
+
+.toc:hover { 
+    text-decoration: underline;
+}
+
+.techim{
+    padding-left: 10px;
+    float: left;
+}
+
+.progateim{
+    float: right;
+    height: 227.78px;
+}
+
+.techtx{
+    float: left;
+    padding-left: 15px;
+}
+
+.progatetx{
+    float: right;
+    padding-right: 250px;
+}
+
+.title1{
+    background-color: rgb(181, 245, 255);
+}
+
+.title2{
+    background-color: rgb(181, 245, 255);
+}
+
+.title3{
+    background-color: rgb(181, 245, 255);
+}
+
+.title4{
+    background-color: rgb(181, 245, 255);
+}
+
+body{
+    text-align: center;
+}
+
