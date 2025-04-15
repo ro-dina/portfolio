@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang = "ja">
+<head>
+    <meta charset = "UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio</title>
+    <link rel = "stylesheet" href = "style.css" />
+</head>
+
+<script src="script.js"></script>
+
+<body>
+    <header>
+        <h1>Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href = "#about"></a></li>
+                <li><a href = "#projects"></a></li>
+                <li><a href = "contact"></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id = "about">
+            <h2>自己紹介</h2>
+            <p>
+                <li>所属：高専</li>
+                <li>年齢：18歳</li>
+            </p>
+        </section>
+
+        <section id = "projects">
+            <h2>Projects</h2>
+            <div class = "project-list">
+
+                <div class = "project-card">
+                    <h3>迷路</h3>
+                    <div class="slider" data-index = "0">
+                        <div class = "slides">
+                            <img src = "images/Works/labyrinth/mapa.png" alt = "labyrinth 1 Image">
+                            <img src = "images/Works/labyrinth/mapb.png" alt = "labyrinth 2 Image">
+                            <img src = "images/Works/labyrinth/clear.png" alt = "labyrinth 3 Image">
+                        </div>
+                    
+                    <button class = "prev">&#10094;</button>
+                    <button class = "next">&#10095;</button>
+                    </div>
+
+                    <ul class = "project-meta">
+                        <div class = "programming-language">
+                            <span class = "badge">Python</span>
+                        </div>
+                        <li><strong>作成日:</strong> 2023年12月～2024年1月</li>
+                        <li>
+                            <strong>アップデート予定:</strong>
+                            <ul class = "update-list">
+                                <li>未定</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <p>既存の操作キャラのプログラムを改造する形でシンプルな迷路ゲームを作った。
+                        基本的な流れとしては下のドアに入ってから別マップで鍵を取ってきて
+                        上のドアに入ればクリアするというものである。
+                        まず、量の多い壁の処理はブロックにIDをつけてそのIDを読み取らせる
+                        ことでプレイヤーの動きを制限したり描画させたりしている。
+                        比較的処理の少ない鍵やドアは1つ1つ座標を取って処理を書いている。
+                        シーンを遷移するときは強引にすべてのアイテムの位置を変えている。
+                    </p>
+
+                    <a href = "https://github.com/ro-dina/hw08?authuser=0" target="_blank">GitHub リポジトリ</a>
+
+                </div>
+
+                <div class = "project-card">
+                    <h3>Project 2</h3>
+                    <p></p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id = "skills">
+
+            <h2>skills</h2>
+
+            <div class = "skill-list">
+                <div class = "skill-group">
+                    <h3>言語</h3>
+                    <ul>
+                        <li>Python</li>
+                    </ul>
+                </div>
+
+                <div class = "skill-group">
+                    <h3>外部サイトの成績</h3>
+                    <ul>
+                        <li>Paiza ランク: <a href="" target = "_blank">Sランク</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id = "contact">
+            <h2>Contact</h2>
+            <p></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Portfolio</p>
+    </footer>
+</body>
+</html>
