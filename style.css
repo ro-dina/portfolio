@@ -107,13 +107,18 @@ footer {
 
 .slider{
     position: relative;
+    width: 100%;
     max-width: 600px;
+    aspect-ratio: 16 / 9;
     margin: auto;
     overflow: hidden;
 }
 
 .slides img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     display: none;
     border-radius: 10px;
 }
