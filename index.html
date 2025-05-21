@@ -7,7 +7,7 @@
     <link rel = "stylesheet" href = "style.css" />
 </head>
 
-<script src="script.js"></script>
+<!---<script src="script.js"></script>-->
 
 <body>
     <header>
@@ -17,6 +17,7 @@
                 <li><a href = "#about"></a></li>
                 <li><a href = "#projects"></a></li>
                 <li><a href = "contact"></a></li>
+                <li><a href = "hobbies"></a></li>
             </ul>
         </nav>
     </header>
@@ -30,6 +31,64 @@
             </p>
         </section>
 
+<!-- スキル-->
+        <section id = "skills">
+    <h2>skills</h2>
+
+        <div class="skill-list">
+        <!-- Python -->
+        <div class="language-card">
+            <img src="images/icons/python.png" alt="Python" class="lang-icon" />
+            <h3>Python</h3>
+
+            <p><strong>学習期間：</strong>2022年〜</p>
+            <p><strong>用途：</strong>機械学習, Webスクレイピング, データ分析, 授業, Paiza, AtCoder</p>
+            <p><strong>使用環境：</strong>VS Code, Jupyter Notebook, AtCoder, Paiza, Google colabs</p>
+
+            <div class="cert-section">
+            <!--  
+            <h4>認定証</h4>
+            <div class="cert-slider">
+                <div class="cert-item">
+                <img src="images/certificates/python/python1.png" class="thumbnail" data-index="0" onclick="openModal(this)" data-group="python">
+                </div>
+
+                <div class="cert-item">
+                <img src="images/certificates/python/python2.png" class="thumbnail" data-index="1" onclick="openModal(this)" data-group="python">
+                </div>
+
+                <div class="cert-item">
+                <img src="images/certificates/python/python3.png" class="thumbnail" data-index="2" onclick="openModal(this)" data-group="python">
+                </div>
+            </div>
+            -->
+            </div>
+        </div>
+
+        <!-- C -->
+        <div class="language-card">
+            <img src="images/icons/C.png" alt="C" class="lang-icon" />
+            <h3>C</h3>
+
+            <p><strong>学習期間：</strong>2023年〜</p>
+            <p><strong>用途：</strong>授業</p>
+            <p><strong>使用環境：</strong>VS Code, Paiza</p>
+
+            <div class="cert-section">
+            <!-- 認定証があればここに追加 -->
+            </div>
+        </div>
+        </div>
+
+        <!-- 外部成績 -->
+        <div class="skill-group">
+        <h3>外部サイトの成績</h3>
+        <ul>
+            <li>Paiza ランク: Sランク</li>
+        </ul>
+        </div>
+        <p></p>
+
         <section id = "projects">
             <h2>Projects</h2>
             <div class = "project-list">
@@ -38,9 +97,9 @@
                     <h3>迷路</h3>
                     <div class = "slider" data-index = "0">
                         <div class = "slides">
-                            <img src = "images/Works/labyrinth/mapa.png" alt = "labyrinth 1 Image">
-                            <img src = "images/Works/labyrinth/mapb.png" alt = "labyrinth 2 Image">
-                            <img src = "images/Works/labyrinth/clear.png" alt = "labyrinth 3 Image">
+                            <img src = "images/Works/labyrinth/mapa.png" alt = "labyrinth 1 Image" data-group="labyrinth">
+                            <img src = "images/Works/labyrinth/mapb.png" alt = "labyrinth 2 Image" data-group="labyrinth">
+                            <img src = "images/Works/labyrinth/clear.png" alt = "labyrinth 3 Image" data-group="labyrinth">
                         </div>
                     
                     <button class = "prev">&#10094;</button>
@@ -77,9 +136,9 @@
                     <h3>PySideを利用したGUIアプリ</h3>
                     <div class = "slider" data-index = "1">
                         <div class = "slides">
-                            <img src = "images/Works/GUI_app/main.png" alt = "GUI_app 1 Image">
-                            <img src = "images/Works/GUI_app/add_template.png" alt = "GUI_app 2 Image">
-                            <img src = "images/Works/GUI_app/chname.png" alt = "GUI_app 3 Image">
+                            <img src = "images/Works/GUI_app/main.png" alt = "GUI_app 1 Image" data-group="GUI-app">
+                            <img src = "images/Works/GUI_app/add_template.png" alt = "GUI_app 2 Image" data-group="GUI-app">
+                            <img src = "images/Works/GUI_app/chname.png" alt = "GUI_app 3 Image" data-group="GUI-app">
                         </div>
 
                     <button class = "prev">&#10094;</button>
@@ -153,26 +212,7 @@
             </div>
         </section>
 
-        <section id = "skills">
 
-            <h2>skills</h2>
-
-            <div class = "skill-list">
-                <div class = "skill-group">
-                    <h3>言語</h3>
-                    <ul>
-                        <li>Python</li>
-                    </ul>
-                </div>
-
-                <div class = "skill-group">
-                    <h3>外部サイトの成績</h3>
-                    <ul>
-                        <li>Paiza ランク: Sランク</a></li>
-                    </ul>
-                </div>
-            </div>
-        </section>
 
         <section id = "contact">
             <h2>Contact</h2>
@@ -183,5 +223,13 @@
     <footer>
         <p>&copy; 2025 Portfolio</p>
     </footer>
+
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <button class="modal-nav left" onclick="event.stopPropagation(); changeModalSlide(-1)">&#10094;</button>
+        <img id="modalImage" class="modal-content" src="">
+        <button class="modal-nav right" onclick="event.stopPropagation(); changeModalSlide(1)">&#10095;</button>
+    </div>
+
+<script src="script.js"></script> 
 </body>
 </html>
