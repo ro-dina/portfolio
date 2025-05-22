@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>日本の旅マップ</title>
+  <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+"></script>
+</head>
+<body>
+
+<h2>日本の都市マップ</h2>
+<div id="japan-map" style="height:600px;"></div>
+
+<script>
+  const cityData = [
+    { name: "東京", lat: 35.6895, lon: 139.6917, url: "travel/tokyo.html" },
+    { name: "大阪", lat: 34.6937, lon: 135.5023, url: "travel/osaka.html" },
+    { name: "京都", lat: 35.0116, lon: 135.7681, url: "travel/kyoto.html" }
+  ];
+
+  const data = [{
+    type: "scattergeo",
+    mode: "markers+text",
+    lat: cityData.map(c => c.lat),
+    lon: cityData.map(c => c.lon),
+    text: cityData.map(c => c.name),
+    marker: { size: 10, color: "blue" },
+    textposition: "top center",
+    hoverinfo: "text"
+  }];
+
+  const layout = {
+    geo: {
+      scope: "asia",
+      projection: { type: "natural earth" },
+      center: { lat: 36, lon: 138 },
+      lataxis: { range: [30, 46] },
+      lonaxis: { range: [128, 146] }
+    },
+    margin: { t: 0, b: 0 }
+  };
+
+  Plotly.newPlot("japan-map", data, layout);
+
+  document.getElementById("japan-map").on("plotly_click", function(data) {
+    const i = data.points[0].pointIndex;
+    window.location.href = cityData[i].url;
+  });
+</script>
+
+</body>
+</html>
