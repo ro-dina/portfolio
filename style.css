@@ -45,11 +45,14 @@ section {
 
 .project-list {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
 .project-card {
+    flex: 1 1 calc(33.333% - 1rem);
+    max-width: calc(33.333% - 1rem);
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
@@ -264,9 +267,9 @@ button.next{
     .project-list {
         flex-direction: row;
     }
-
     .project-card {
-        flex: 1;
+        flex: 1 1 calc(33.333% - 1rem);
+        max-width: calc(33.333% - 1rem);
     }
 }
 
