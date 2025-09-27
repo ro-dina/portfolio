@@ -51,12 +51,20 @@ section {
 }
 
 .project-card {
-    flex: 1 1 calc(33.333% - 1rem);
-    max-width: calc(33.333% - 1rem);
+    flex: 1 1 100%;
+    max-width: 100%;
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* 2列（スマホ横/小型タブレット） */
+@media screen and (min-width: 560px) {
+    .project-card {
+        flex: 1 1 calc(50% - 1rem);
+        max-width: calc(50% - 1rem);
+    }
 }
 
 .project-image {
